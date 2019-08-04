@@ -12,15 +12,16 @@ export class PopularComponent implements OnInit {
   itemsPerSlide = 5;
   singleSlideOffset = true;
 
-  movies;
+  movies: Object;
+  //movies: Array<Object>;
 
   constructor(public _api: ApiService) {}
   
 
   ngOnInit() {
     this._api.getPopular().subscribe(
-      res => {
-        this.movies = res;
+      (res:any) => {
+        this.movies = res.results;
         console.log(this.movies);
       }
     );

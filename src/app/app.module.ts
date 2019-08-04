@@ -11,13 +11,19 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HeaderComponent } from './header/header.component';
 import { PopularComponent } from './popular/popular.component';
 import { LoginComponent } from './login/login.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
+import { GenresComponent } from './genres/genres.component';
+import { UpcomingComponent } from './upcoming/upcoming.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PopularComponent,
-    LoginComponent
+    LoginComponent,
+    MovieCardComponent,
+    GenresComponent,
+    UpcomingComponent
   ],
   imports: [
     BrowserModule,
