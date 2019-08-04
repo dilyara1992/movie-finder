@@ -10,12 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HeaderComponent } from './header/header.component';
 import { PopularComponent } from './popular/popular.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PopularComponent
+    PopularComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
