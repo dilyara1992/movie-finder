@@ -22,7 +22,7 @@ export class PopularComponent implements OnInit {
     this._api.getPopular().subscribe(
       (res:any) => {
         this.movies = res.results;
-        console.log(this.movies);
+        console.log("testirovkish", this.movies);
       }
     );
   }

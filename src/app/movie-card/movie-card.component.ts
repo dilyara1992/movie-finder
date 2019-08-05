@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-movie-card',
+  selector: 'movie-card',
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss']
 })
@@ -13,6 +13,7 @@ export class MovieCardComponent implements OnInit {
   movie: Object;
 
   ngOnInit() {
+    console.log("this is movie", this.movie)
   }
 
 }

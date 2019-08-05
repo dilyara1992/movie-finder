@@ -18,7 +18,7 @@ export class UpcomingComponent implements OnInit {
   ngOnInit() {
     this._api.getUpcoming().subscribe((res: any) =>{
       this.movies = res.results;
-      console.log(this.movies);
+      
     });
   }
 
