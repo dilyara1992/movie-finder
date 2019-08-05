@@ -1,0 +1,12 @@
+<div>
+  <div class="searchresults">
+    <div *ngFor="let result of _api.movies" class="card" style="width: 18rem;">
+      <img src="https://image.tmdb.org/t/p/w300/{{result.poster_path}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="text-primary">{{result.original_title}}</h5>
+        <p class="card-text="></p>
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </div>
+    </div>
+  </div>
+</div>

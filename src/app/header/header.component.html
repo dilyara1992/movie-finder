@@ -1,20 +1,21 @@
-<nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
-  <div id="search-input">
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-  <!-- <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div> -->
+<div>
+  <nav class="navbar navbar-dark bg-dark">
+    
+    <div class="navigationLinks"> 
+      <!-- Navbar content -->  
+       <div><p><a routerLink="home">Home</a></p> </div> 
+        <p><a routerLink="home">Upcoming</a></p>
+        <p><a routerLink="top-rated">Top Rated</a></p>
+        <p><a routerLink="popular">Popular</a></p>
+    </div>
+    <div id="search-input">
+        <form class="form-inline my-2 my-lg-0">
+          <input [(ngModel)]="_api.search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
+            aria-label="Search">
+          <button (click)="_api.onClick()" class="btn btn-outline-success my-2 my-sm-0" type="submit"><a
+            routerLink="search">Search</a></button>
+        </form>
+      </div>
+  </nav>
+</div>
 
-</nav>

@@ -8,22 +8,22 @@ import { ApiService } from '../api.service';
 })
 export class PopularComponent implements OnInit {
 
-  title = 'movie-finder';
-  itemsPerSlide = 5;
-  singleSlideOffset = true;
+  // title = 'movie-finder';
+  // itemsPerSlide = 5;
+  // singleSlideOffset = true;
 
-  movies;
+  // movies;
 
   constructor(public _api: ApiService) {}
   
 
   ngOnInit() {
-    this._api.getPopular().subscribe(
-      res => {
-        this.movies = res;
-        console.log(this.movies);
-      }
-    );
+    // this._api.getPopular().subscribe(
+    //   (res: any) => {
+    //    this.movies = res.results;
+    //    console.log("testirui", this.movies);
+    //   }
+    // );
   }
   
  

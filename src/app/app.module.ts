@@ -4,18 +4,30 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http';
 
+import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HeaderComponent } from './header/header.component';
 import { PopularComponent } from './popular/popular.component';
+import { SearchComponent } from './search/search.component';
+import { NowPlayingComponent } from './now-playing/now-playing.component';
+import { TopRatedComponent } from './top-rated/top-rated.component';
+import { UpcomingComponent } from './upcoming/upcoming.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PopularComponent
+    PopularComponent,
+    SearchComponent,
+    NowPlayingComponent,
+    TopRatedComponent,
+    UpcomingComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +35,8 @@ import { PopularComponent } from './popular/popular.component';
     BrowserAnimationsModule,
     CarouselModule.forRoot(),
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
