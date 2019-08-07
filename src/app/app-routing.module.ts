@@ -6,6 +6,7 @@ import { UpcomingComponent } from './upcoming/upcoming.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
 import { NowPlayingComponent } from './now-playing/now-playing.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: "popular", component: PopularComponent},
   {path: "upcoming", component: UpcomingComponent },
   {path: "top-rated", component: TopRatedComponent},
-  {path: "now-playing", component: NowPlayingComponent}
+  {path: "now-playing", component: NowPlayingComponent},
+  {path: "login", component: LoginComponent}
 ];
 
 @NgModule({

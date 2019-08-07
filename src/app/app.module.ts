@@ -17,6 +17,9 @@ import { NowPlayingComponent } from './now-playing/now-playing.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { HomeComponent } from './home/home.component';
     NowPlayingComponent,
     TopRatedComponent,
     UpcomingComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ import { HomeComponent } from './home/home.component';
     CarouselModule.forRoot(),
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

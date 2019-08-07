@@ -7,6 +7,7 @@
         <p><a routerLink="home">Upcoming</a></p>
         <p><a routerLink="top-rated">Top Rated</a></p>
         <p><a routerLink="popular">Popular</a></p>
+        <p><a routerLink="login">Login</a></p>
     </div>
     <div id="search-input">
         <form class="form-inline my-2 my-lg-0">
@@ -16,6 +17,22 @@
             routerLink="search">Search</a></button>
         </form>
       </div>
+      <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
+      <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-basic">
+          Button dropdown <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+          </li>
+        </ul>
+      </div>      
   </nav>
 </div>
 
