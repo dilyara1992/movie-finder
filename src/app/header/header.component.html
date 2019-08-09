@@ -1,38 +1,28 @@
 <div>
   <nav class="navbar navbar-dark bg-dark">
-    
-    <div class="navigationLinks"> 
-      <!-- Navbar content -->  
-       <div><p><a routerLink="home">Home</a></p> </div> 
-        <p><a routerLink="home">Upcoming</a></p>
-        <p><a routerLink="top-rated">Top Rated</a></p>
-        <p><a routerLink="popular">Popular</a></p>
-        <p><a routerLink="login">Login</a></p>
-    </div>
+    <!-- navigation content -->
     <div id="search-input">
-        <form class="form-inline my-2 my-lg-0">
-          <input [(ngModel)]="_api.search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
-            aria-label="Search">
-          <button (click)="_api.onClick()" class="btn btn-outline-success my-2 my-sm-0" type="submit"><a
+      <form class="form-inline my-2 my-lg-0">
+        <input [(ngModel)]="_api.search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
+          aria-label="Search">
+        <button (click)="_api.onClick()" class="btn btn-outline-success my-2 my-sm-0" type="submit"><a
             routerLink="search">Search</a></button>
-        </form>
-      </div>
-      <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
-      <div class="btn-group" dropdown>
-        <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-                aria-controls="dropdown-basic">
-          Button dropdown <span class="caret"></span>
+      </form>
+    </div>
+    <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
+    <div class="dropdown" mdbDropdown>
+
+        <button mdbDropdownToggle mdbBtn color="primary" class="dropdown-toggle waves-light" type="button"
+          mdbWavesEffect>
+          <mdb-icon fas icon="user-cog"></mdb-icon>
         </button>
-        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-            role="menu" aria-labelledby="button-basic">
-          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-          <li class="divider dropdown-divider"></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-          </li>
-        </ul>
-      </div>      
+      
+        <div class="dropdown-menu dropdown-primary">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
   </nav>
 </div>
-

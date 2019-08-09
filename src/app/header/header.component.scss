@@ -2,3 +2,13 @@
     display: flex;
     justify-items: center;
 }
+.btn-group{
+    position: relative;
+    right: 5%;
+}
+#dropdown-basic {
+    right: 0;
+    left: auto;
+    // padding-left: 1px;
+    // padding-right: 1px;
+  }
