@@ -1,6 +1,7 @@
-<div>
+<div class="header-nav">
   <nav class="navbar navbar-dark bg-dark">
     <!-- navigation content -->
+    <!-- Search Button with Input -->
     <div id="search-input">
       <form class="form-inline my-2 my-lg-0">
         <input [(ngModel)]="_api.search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
@@ -10,19 +11,39 @@
       </form>
     </div>
     <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
-    <div class="dropdown" mdbDropdown>
-
-        <button mdbDropdownToggle mdbBtn color="primary" class="dropdown-toggle waves-light" type="button"
-          mdbWavesEffect>
-          <mdb-icon fas icon="user-cog"></mdb-icon>
-        </button>
-      
-        <div class="dropdown-menu dropdown-primary">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+    <div class="btn-group" dropdown [autoClose]="disabled">
+      <button id="button-autoClose2" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-autoClose2" >
+        <i class="fas fa-user-cog"></i><span class="caret"></span>
+      </button>
+      <div>
+          <ul id="dropdown-autoClose2" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-autoClose2">
+              <div class="Login-header">
+                  <h5 id="login">Login</h5>
+                  <p>   </p>
+                  <p class="username">username:</p>
+                  <input [(ngModel)]="_api.loginUsernameSignIn" 
+                  class="Username-input" 
+                  type="email"
+                  name="emailaddress"
+                  size="20" 
+                  placeholder="provide username">
+                  <p>{{_api.loginUsernameSignIn}}   </p>
+                  <p class="username">password:</p>
+                  <p> </p>
+                  <input [(ngModel)]="_api.loginPasswordSignIn"
+                  type="password"
+                  name="pwd" 
+                  size="20" 
+                  placeholder="provide password">
+                  <p>  </p>
+                  <button>Sign In</button>
+                  <p>   </p>
+                  <p class="username">Don't Have any Account?</p>
+                  <p> </p>
+                  <button><a routerLink="register">Sign Up</a></button>
+              </div>
+            </ul>
       </div>
+    </div>
   </nav>
 </div>

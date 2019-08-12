@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   singleSlideOffset = true;
 
   movies;
+  Topmovies;
 
   constructor(public _api: ApiService) {}
   
@@ -24,6 +25,12 @@ export class HomeComponent implements OnInit {
        console.log("testirui", this.movies);
       }
     );
+    this._api.getTop().subscribe(
+      (top:any)=> {
+        this.Topmovies = top.results;
+        console.log(this.Topmovies)
+      }
+    )
   }
 
 }

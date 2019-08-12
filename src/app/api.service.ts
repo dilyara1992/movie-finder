@@ -10,6 +10,14 @@ export class ApiService {
   search: any;
   movies: any;
   input: any;
+  loginUsernameSignIn: String;
+  loginPasswordSignIn: String;
+
+  NewUserFirstname: String;
+  NewUerLastName: String;
+  NewUserEmail: String;
+  NewUserPassword: String;
+
 
 
   getMovies(search: any){
@@ -18,6 +26,14 @@ export class ApiService {
     return this._http.get(url)
     
   }
+
+  getTop(){
+    const urltop =`https://api.themoviedb.org/3/movie/top_rated?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US&page=1`
+    console.log(urltop)
+    return this._http.get(urltop);
+  }
+
+  
 
   getPopular(){
     const urlpop = `https://api.themoviedb.org/3/movie/popular?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US&page=1&region=USA`
