@@ -1,0 +1,16 @@
+.searchresults{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: baseline;
+}
+img{
+    display:flex;
+    flex-direction: row;
+}
+
+div{
+    border-color: black;
+    background-color: #25333D; 
+}

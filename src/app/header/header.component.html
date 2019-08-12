@@ -1,29 +1,51 @@
-<nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
-  <app-genres></app-genres>
 
-  <div id="search-input">
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      
-    </form>
-  </div>
-  <div id="login">
-    <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="login">Login</button>
-    </form>
-  </div>
- 
-  <!-- <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div> -->
+<div class="header-nav">
+  <nav class="navbar navbar-dark bg-dark">
+    <!-- navigation content -->
+    <!-- Search Button with Input -->
+    <div id="search-input">
+      <form class="form-inline my-2 my-lg-0">
+        <input [(ngModel)]="_api.search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
+          aria-label="Search">
+        <button (click)="_api.onClick()" class="btn btn-outline-success my-2 my-sm-0" type="submit"><a
+            routerLink="search">Search</a></button>
+      </form>
+    </div>
+    <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
+    <div class="btn-group" dropdown [autoClose]="disabled">
+      <button id="button-autoClose2" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-autoClose2" >
+        <i class="fas fa-user-cog"></i><span class="caret"></span>
+      </button>
+      <div>
+          <ul id="dropdown-autoClose2" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-autoClose2">
+              <div class="Login-header">
+                  <h5 id="login">Login</h5>
+                  <p>   </p>
+                  <p class="username">username:</p>
+                  <input [(ngModel)]="_api.loginUsernameSignIn" 
+                  class="Username-input" 
+                  type="email"
+                  name="emailaddress"
+                  size="20" 
+                  placeholder="provide username">
+                  <p>{{_api.loginUsernameSignIn}}   </p>
+                  <p class="username">password:</p>
+                  <p> </p>
+                  <input [(ngModel)]="_api.loginPasswordSignIn"
+                  type="password"
+                  name="pwd" 
+                  size="20" 
+                  placeholder="provide password">
+                  <p>  </p>
+                  <button>Sign In</button>
+                  <p>   </p>
+                  <p class="username">Don't Have any Account?</p>
+                  <p> </p>
+                  <button><a routerLink="register">Sign Up</a></button>
+              </div>
+            </ul>
+      </div>
+    </div>
+  </nav>
+</div>
 
-</nav>

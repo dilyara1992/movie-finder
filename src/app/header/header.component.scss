@@ -1,9 +1,50 @@
-#search-input{
-    position: sticky;
-    left: 100%;
+.navigationLinks{
+    display: flex;
+    justify-items: center;
 }
-#dropdown{
+.btn-group{
     position: relative;
-    right: 95%;
-    
+    right: 5%;
+}
+// #dropdown-basic {
+//     right: 0;
+//     left: auto;
+//     padding-left: 1px;
+//     padding-right: 1px;
+//   }
+.dropdown-menu{
+   background-image: url("images/movie/camera-188083_640.jpg");
+   width: 300px;
+   height: 400px;
+}
+
+.search-input{
+    display: flex;
+    flex-grow: 50;
+    align-content: center;
+    position: relative;
+    right: 50%;
+}
+
+.header-nav{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.Login-header{
+    margin: 5%;
+}
+// .Username-input{
+//     margin: 5%;
+// }
+#login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065AB;
+}
+.btn-group{
+    background-color: #798893;
+}
+.username{
+    color: #0065AB;
 }

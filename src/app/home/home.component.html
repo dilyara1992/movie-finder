@@ -1,0 +1,30 @@
+<div class="carousel">
+  <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="0"
+    [interval]=1500>
+    <slide *ngFor="let result of movies">
+      <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}" style="display: block; width: 100%;">
+      <div class="carousel-caption">
+        <h4>Slide {{index}}</h4>
+      </div>
+    </slide>
+  </carousel>
+</div>
+<div>
+  <div class="carousel">
+    <h1>Top Rated</h1>
+    <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="singleSlideOffset" [startFromIndex]="0"
+      [interval]="false">
+      <slide *ngFor="let result of Topmovies" class="card" style="width: 18rem;">
+        <img src="https://image.tmdb.org/t/p/w300//{{result.poster_path}}" style="display: block; width: 100%;">
+        <div class="card-body">
+          <h5 class="text-primary">{{result.original_title}}</h5>
+          <p class="card-text="></p>
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+        <div class="carousel-caption">
+          <!-- <h4>Slide {{index}}</h4> -->
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
