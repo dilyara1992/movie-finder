@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from '../api.service';
+
 
 @Component({
   selector: 'app-upcoming',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpcomingComponent implements OnInit {
 
-  constructor() { }
+  movies: Array<Object>;
+  //movies: Object;
+
+  constructor(private _api: ApiService) { 
+  
+  }
 
   ngOnInit() {
+    this._api.getUpcoming().subscribe((res: any) =>{
+      this.movies = res.results;
+      
+    });
   }
 
 }
+

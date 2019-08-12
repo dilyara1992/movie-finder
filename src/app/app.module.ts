@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HeaderComponent } from './header/header.component';
 import { PopularComponent } from './popular/popular.component';
+
 import { SearchComponent } from './search/search.component';
 import { NowPlayingComponent } from './now-playing/now-playing.component';
 import { TopRatedComponent } from './top-rated/top-rated.component';
@@ -29,12 +30,19 @@ import { RegisterComponent } from './register/register.component';
     AppComponent,
     HeaderComponent,
     PopularComponent,
+<<<<<<< master
+    LoginComponent,
+    MovieCardComponent,
+    GenresComponent,
+    UpcomingComponent
+=======
     SearchComponent,
     NowPlayingComponent,
     TopRatedComponent,
     UpcomingComponent,
     HomeComponent,
     RegisterComponent
+>>>>>>> master
   ],
   imports: [
     BrowserModule,
