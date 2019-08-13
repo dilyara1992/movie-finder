@@ -1,0 +1,30 @@
+{
+  "name": "MovieAppUser",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "NewUserFirstName": {
+      "type": "string",
+      "required": true
+    },
+    "NewUserLastName": {
+      "type": "string",
+      "required": true
+    },
+    "NewUserEmail": {
+      "type": "string",
+      "required": true
+    },
+    "NewUserPassword": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,25 +1,33 @@
 <div>
-    <h1>User Registration Form</h1>
-    <h4>First Name:</h4>
-    <input 
-    size="50"
-    type="text"
-    name="firstName">
-    <h4>Last Name</h4>
-    <input
-    size="50"
-    type="text"
-    name="lastName">
-    <h4>Email</h4>
-    <input
-    size="50"
-    type="email"
-    name="email"
-    >
-    <h4>Password</h4>
-    <input
-    size="50"
-    type="password"
-    name="pwd">
+    <h3>User Registration Form</h3>
+    <div class="UserRegistration">
+        <h4>First Name:</h4>
+        <input [(ngModel)]="_api.user.NewUserFirstName"
+        size="50"
+        type="text"
+        name="firstName">
+        <!-- <p>{{_api.user.NewUserFirstName}}</p> -->
+        <h4>Last Name</h4>
+        <input  [(ngModel)]="_api.user.NewUserLastName"
+        size="50"
+        type="text"
+        name="lastName">
+        <!-- <p>{{_api.user.NewUserLastName}}</p> -->
+        <h4>Email</h4>
+        <input [(ngModel)]="_api.user.NewUserEmail"
+        size="50"
+        type="email"
+        name="email"
+        >
+        <!-- <p>{{_api.user.NewUserEmail}}</p> -->
+        <h4>Password</h4>
+        <input [(ngModel)]="_api.user.NewUserPassword"
+        size="50"
+        type="password"
+        name="pwd">
+        <!-- <p>{{_api.user.NewUserPassword}}</p> -->
+        <p> </p>
+        <button (click)="onClickUser()">Submit</button>
+    </div>
 </div>
 

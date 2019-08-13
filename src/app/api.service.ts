@@ -13,10 +13,13 @@ export class ApiService {
   loginUsernameSignIn: String;
   loginPasswordSignIn: String;
 
-  NewUserFirstname: String;
-  NewUerLastName: String;
-  NewUserEmail: String;
-  NewUserPassword: String;
+  user = {
+      NewUserFirstName: '',
+      NewUerLastName: '',
+      NewUserEmail: '',
+      NewUserPassword: '',
+    }
+  
 
 
 
@@ -48,6 +51,12 @@ export class ApiService {
         console.log(this.movies);
       }
     )
+  }
+
+  createNewUser(){
+    const url= 'http://localhost:3000/api/MovieAppUsers'
+    console.log(this.user)
+    return this._http.post(url, this.user)
   }
   
   // onClick(){

@@ -1,7 +1,20 @@
-h1{
+div{
+    margin: 5%;
+}
+h3{
     display: flex;
     align-content: center;
     justify-content: center;
     position: relative;
     top: 50%;
+}
+
+.UserRegistration{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+    height: 70%;
+    margin: 15%;
 }
