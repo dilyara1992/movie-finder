@@ -14,15 +14,12 @@ export class ApiService {
   loginPasswordSignIn: String;
 
   user = {
-      NewUserFirstName: '',
-      NewUerLastName: '',
-      NewUserEmail: '',
-      NewUserPassword: '',
+      firstname: '',
+      lastname: '',
+      email: '',
+      password: '',
     }
   
-
-
-
   getMovies(search: any){
     const url = `https://api.themoviedb.org/3/search/movie?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US&query=${this.search}&page=1&include_adult=false`
     console.log(url)
@@ -54,9 +51,11 @@ export class ApiService {
   }
 
   createNewUser(){
-    const url= 'http://localhost:3000/api/MovieAppUsers'
+
+    const url= 'http://localhost:3000/api/appUsers'
     console.log(this.user)
     return this._http.post(url, this.user)
+    
   }
   
   // onClick(){

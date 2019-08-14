@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
     this._api.createNewUser()
       .subscribe( (res: any) =>{
         // success
-        // this._api.user = res;
+        this._api.user = res;
         console.log(this._api.user)
       }, err => {
         //alert
