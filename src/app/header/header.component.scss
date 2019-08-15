@@ -13,9 +13,8 @@
 //     padding-right: 1px;
 //   }
 .dropdown-menu{
-   background-image: url("images/movie/camera-188083_640.jpg");
-   width: 300px;
-   height: 400px;
+   width: 200px;
+   height: auto;
 }
 
 .search-input{
@@ -47,4 +46,7 @@
 }
 .username{
     color: #0065AB;
+}
+#signedIn-email{
+    color: blue;
 }

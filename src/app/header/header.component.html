@@ -13,8 +13,27 @@
     </div>
     <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
     <div>
-      <button type="button" class="btn btn-link" id="signin-nav-button"><a routerLink="signin">Sign In</a></button>
-      <button type="button" class="btn btn-link" id="signup-nav-button"><a routerLink="register">Sign Up</a></button>
+      <div *ngIf="_api.signin == false">
+          <button type="button" class="btn btn-link" id="signin-nav-button"><a routerLink="signin">Sign In</a></button>
+          <button type="button" class="btn btn-link" id="signup-nav-button"><a routerLink="register">Sign Up</a></button>
+      </div>
+      <div id="signedIn-email" *ngIf="_api.signin == true">
+          <div class="btn-group" dropdown>
+              <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                      aria-controls="dropdown-basic">
+                {{_api.user.email}} <span class="caret"></span>
+              </button>
+              <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                  role="menu" aria-labelledby="button-basic">
+                <li role="menuitem"><a class="dropdown-item" routerLink = "fav-movies">Favorite Movies</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+                </li>
+              </ul>
+            </div>
+      </div>
     </div>
   </nav>
 </div>

@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  constructor(public _http: HttpClient) { }
+  constructor(public _http: HttpClient, public _router: Router ) { }
 
   search: any;
   movies: any;
@@ -13,6 +14,7 @@ export class ApiService {
   loginUsernameSignIn: String;
   loginPasswordSignIn: String;
   outputSignIn = {};
+  signin: boolean = false;
 
   user = {
       firstname: '',
@@ -56,6 +58,7 @@ export class ApiService {
 
     const url= 'http://localhost:3000/api/appUsers'
     console.log(this.user)
+    this.signin = true;
     return this._http.post(url, this.user)
     
   }
@@ -63,6 +66,7 @@ export class ApiService {
   signIn(){
     const url = 'http://localhost:3000/api/appUsers/login';
     console.log(this.user);
+    this.signin = true;
     return this._http.post(url, this.user);
   }
   
@@ -78,6 +82,7 @@ export class ApiService {
     this.signIn().subscribe(
       (res: any) => {
         this.outputSignIn = res;
+        this._router.navigate(['/home']);
         console.log(this.outputSignIn);
       }
     )
