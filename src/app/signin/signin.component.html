@@ -1,0 +1,13 @@
+<h1>Sign In Form</h1>
+<div>
+  <div>
+    <h4>Email</h4>
+    <input [(ngModel)]="_api.user.email" size="50" type="email" name="email">
+    <!-- <p>{{_api.user.email}}</p> -->
+    <h4>Password</h4>
+    <input [(ngModel)]="_api.user.password" size="50" type="password" name="pwd">
+    <!-- <p>{{_api.user.password}}</p> -->
+    <p> </p>
+    <button (click)="_api.onSignIn()">Submit</button>
+  </div>
+</div>

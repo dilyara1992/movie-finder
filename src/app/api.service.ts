@@ -12,6 +12,7 @@ export class ApiService {
   input: any;
   loginUsernameSignIn: String;
   loginPasswordSignIn: String;
+  outputSignIn = {};
 
   user = {
       firstname: '',
@@ -19,6 +20,7 @@ export class ApiService {
       email: '',
       password: '',
     }
+
   
   getMovies(search: any){
     const url = `https://api.themoviedb.org/3/search/movie?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US&query=${this.search}&page=1&include_adult=false`
@@ -57,6 +59,12 @@ export class ApiService {
     return this._http.post(url, this.user)
     
   }
+
+  signIn(){
+    const url = 'http://localhost:3000/api/appUsers/login';
+    console.log(this.user);
+    return this._http.post(url, this.user);
+  }
   
   // onClick(){
   //   this._api.getMovies(this.input).subscribe(
@@ -66,5 +74,13 @@ export class ApiService {
   //     }
   //   )
   // }
+  onSignIn(){
+    this.signIn().subscribe(
+      (res: any) => {
+        this.outputSignIn = res;
+        console.log(this.outputSignIn);
+      }
+    )
+  }
 
 }
