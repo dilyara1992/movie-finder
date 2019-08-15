@@ -24,6 +24,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { RegisterComponent } from './register/register.component';
 import { SigninComponent } from './signin/signin.component';
 import { FavmoviesComponent } from './favmovies/favmovies.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FavmoviesComponent } from './favmovies/favmovies.component';
     HomeComponent,
     RegisterComponent,
     SigninComponent,
-    FavmoviesComponent
+    FavmoviesComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,

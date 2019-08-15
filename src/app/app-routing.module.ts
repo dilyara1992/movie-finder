@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent} from './register/register.component';
 import { SigninComponent} from './signin/signin.component';
 import { FavmoviesComponent } from './favmovies/favmovies.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: "now-playing", component: NowPlayingComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'signin', component: SigninComponent},
-  {path: 'fav-movies', component: FavmoviesComponent}
+  {path: 'fav-movies', component: FavmoviesComponent},
+  {path: 'movie-card', component: MovieCardComponent}
 
 ];
 
