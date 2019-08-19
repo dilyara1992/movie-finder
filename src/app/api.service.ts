@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -40,7 +41,7 @@ export class ApiService {
   
 
   getPopular(){
-    const urlpop = `https://api.themoviedb.org/3/movie/popular?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US&page=1&region=USA`
+    const urlpop = `https://api.themoviedb.org/3/movie/popular?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US&page=1`
     console.log(urlpop);
     return this._http.get(urlpop)
   }

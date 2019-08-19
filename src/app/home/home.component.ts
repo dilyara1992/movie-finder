@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+// import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +13,8 @@ export class HomeComponent implements OnInit {
   itemsPerSlide = 5;
   singleSlideOffset = true;
 
-  movies;
-  Topmovies;
+  movies: Array<Object>;
+  Topmovies: Array<Object>;
 
   constructor(public _api: ApiService) {}
   
@@ -25,8 +26,9 @@ export class HomeComponent implements OnInit {
        console.log("testirui", this.movies);
       }
     );
+    
     this._api.getTop().subscribe(
-      (top:any)=> {
+      (top: any)=> {
         this.Topmovies = top.results;
         console.log(this.Topmovies)
       }
