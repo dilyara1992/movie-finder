@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService }  from '../api.service';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-movie-card',
@@ -8,7 +8,9 @@ import { ApiService }  from '../api.service';
 })
 export class MovieCardComponent implements OnInit {
 
-  constructor( public _api: ApiService) { }
+  @Input() movie: Object;
+
+  constructor() { }
 
   ngOnInit() {
   }

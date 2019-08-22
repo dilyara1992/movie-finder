@@ -8,9 +8,8 @@ import { ApiService } from '../api.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public _api: ApiService) { }
+  constructor(private _api: ApiService) { }
 
   ngOnInit() {
   }
-
 }

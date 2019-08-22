@@ -1,16 +1,23 @@
-#card{
-    width: 25%;
-    height: auto;
-    position: relative;
-    margin: 5%;
-    // left: 5%;
-    // top: auto;
+div{
 }
 .card-image{
     width: 50%;
     height: auto;
 }
 .image-block{
+    width: 100%;
+    height: 70%;
+}
+mdb-card-img{
+    width: 50%;
+    height: auto;
+}
+mdb-card{
+    margin: 5%;
+    width: 15%;
+    max-height: 10%
+}
+mdb-card-body{
     width: 100%;
     height: 300px;
 }

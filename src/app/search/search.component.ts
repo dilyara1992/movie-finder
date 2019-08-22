@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -13,13 +14,5 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  // onClick(){
-  //   this._api.getMovies().subscribe(
-  //     res => {
-  //       this.movie = res;
-  //     }
-  //   )
-  // }
 
 }

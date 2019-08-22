@@ -12,35 +12,30 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { HeaderComponent } from './header/header.component';
-import { PopularComponent } from './popular/popular.component';
+
+
+
 import { SearchComponent } from './search/search.component';
-import { NowPlayingComponent } from './now-playing/now-playing.component';
-import { TopRatedComponent } from './top-rated/top-rated.component';
-import { UpcomingComponent } from './upcoming/upcoming.component';
-import { HomeComponent } from './home/home.component';
 
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { RegisterComponent } from './register/register.component';
 import { SigninComponent } from './signin/signin.component';
 import { FavmoviesComponent } from './favmovies/favmovies.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { AllmoviesComponent } from './allmovies/allmovies.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    PopularComponent,
     SearchComponent,
-    NowPlayingComponent,
-    TopRatedComponent,
-    UpcomingComponent,
-    HomeComponent,
     RegisterComponent,
     SigninComponent,
     FavmoviesComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    AllmoviesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

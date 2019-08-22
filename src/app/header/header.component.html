@@ -1,76 +1,39 @@
 <div class="header-nav">
-  <nav class="navbar navbar-dark bg-dark">
-    <!-- navigation content -->
-    <!-- Search Button with Input -->
-    <p><a routerLink="home">Home Page</a></p>
-    <div id="search-input">
-      <form class="form-inline my-2 my-lg-0">
-        <input [(ngModel)]="_api.search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
-          aria-label="Search">
-        <button (click)="_api.onClick()" class="btn btn-outline-success my-2 my-sm-0" type="submit"><a
-            routerLink="search">Search</a></button>
-      </form>
-    </div>
-    <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
-    <div>
-      <div *ngIf="_api.signin == false">
-          <button type="button" class="btn btn-link" id="signin-nav-button"><a routerLink="signin">Sign In</a></button>
-          <button type="button" class="btn btn-link" id="signup-nav-button"><a routerLink="register">Sign Up</a></button>
-      </div>
-      <div id="signedIn-email" *ngIf="_api.signin == true">
-          <div class="btn-group" dropdown>
-              <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-                      aria-controls="dropdown-basic">
-                {{_api.user.email}} <span class="caret"></span>
-              </button>
-              <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-                  role="menu" aria-labelledby="button-basic">
-                <li role="menuitem"><a class="dropdown-item" routerLink = "fav-movies">Favorite Movies</a></li>
-                <li role="menuitem"><a class="dropdown-item" routerLink = "movie-card">Temporary Link</a></li>
-                <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-                <li class="divider dropdown-divider"></li>
-                <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-                </li>
-              </ul>
+        <nav class="navbar navbar-dark bg-dark">
+          <!-- navigation content -->
+          <!-- Search Button with Input -->
+          <p><a routerLink="home">Home Page</a></p>
+          <div id="search-input">
+            <form class="form-inline my-2 my-lg-0">
+              <input [(ngModel)]="_api.search" name="search" class="form-control mr-sm-2" type="search" placeholder="Search"
+                aria-label="Search">
+              <button (click)="_api.onClick()" class="btn btn-outline-success my-2 my-sm-0" type="submit"><a
+                  routerLink="search">Search</a></button>
+            </form>
+          </div>
+          <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
+          <div>
+            <div *ngIf="_api.signin == false">
+                <button type="button" class="btn btn-link" id="signin-nav-button"><a routerLink="signin">Sign In</a></button>
+                <button type="button" class="btn btn-link" id="signup-nav-button"><a routerLink="register">Sign Up</a></button>
             </div>
+            <div id="signedIn-email" *ngIf="_api.signin == true">
+                <div class="btn-group" dropdown>
+                    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                            aria-controls="dropdown-basic">
+                      {{_api.user.email}} <span class="caret"></span>
+                    </button>
+                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                        role="menu" aria-labelledby="button-basic">
+                      <li role="menuitem"><a class="dropdown-item" routerLink = "fav-movies">Favorite Movies</a></li>
+                      <li role="menuitem"><a class="dropdown-item" routerLink = "movie-card">Temporary Link</a></li>
+                      <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li class="divider dropdown-divider"></li>
+                      <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+          </div>
+        </nav>
       </div>
-    </div>
-  </nav>
-</div>
-
-
-<!-- <div class="btn-group" dropdown [autoClose]="disabled">
-      <button id="button-autoClose2" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-autoClose2" >
-        <i class="fas fa-user-cog"></i><span class="caret"></span>
-      </button>
-      <div>
-          <ul id="dropdown-autoClose2" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-autoClose2">
-              <div class="Login-header">
-                  <h5 id="login">Login</h5>
-                  <p>   </p>
-                  <p class="username">username:</p>
-                  <input [(ngModel)]="_api.user.email" 
-                  class="Username-input" 
-                  type="email"
-                  name="emailaddress"
-                  size="20" 
-                  placeholder="provide username">
-                  <p>{{_api.user.email}}  </p>
-                  <p class="username">password:</p>
-                  <p> </p>
-                  <input [(ngModel)]="_api.user.password"
-                  type="password"
-                  name="pwd" 
-                  size="20" 
-                  placeholder="provide password">
-                  <P>{{_api.user.password}}</P>
-                  <p>  </p>
-                  <button (click)="_api.onSignIn()"><a routerLink="signin">Sign In</a></button>
-                  <p>   </p>
-                  <p class="username">Don't Have any Account?</p>
-                  <p> </p>
-                  <button><a routerLink="register">Sign Up</a></button>
-              </div>
-            </ul>
-      </div>
-    </div> -->
