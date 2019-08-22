@@ -1,39 +1,41 @@
-<div>
-  <!--Card-->
-  <mdb-card id="card">
-    <!--Card image-->
-    <div class="image-block">
+<!--Card-->
+<mdb-card>
+  <!--Card image-->
+  <div class="image-block">
+    <div class="image-control">
       <div class="view overlay waves-light" mdbWavesEffect>
-        <mdb-card-img class="card-image"
-          src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+        <mdb-card-img class="card-image" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
         </mdb-card-img>
         <a>
           <div class="mask rgba-white-slight"></div>
         </a>
       </div>
     </div>
-    <!--/.Card image-->
-    
-    <div class="card-content">
-        <!--Card content-->
-        <mdb-card-body>
-            <a class="activator px-3 mr-2"><mdb-icon fas icon="share-alt"></mdb-icon></a>
-            <!--Title-->
-            <mdb-card-title><p>Card title</p></mdb-card-title>
-            <hr>
-            <!--Text-->
-            <mdb-card-text>
-              Some quick example text to build on the card title and make up the bulk of the card's content.
-            </mdb-card-text>
-            <a class="link-text">
-              <h5 class="waves-light" mdbWavesEffect>Read more
-                <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
-              </h5>
-            </a>
-          </mdb-card-body>
-          <!--/.Card content-->
-    </div>
-  </mdb-card>
-  <!--/.Card-->
-</div>
+  </div>
+  <!--/.Card image-->
 
+  <div class="card-content">
+    <!--Card content-->
+    <mdb-card-body>
+      <a class="activator px-3 mr-2">
+        <mdb-icon fas icon="share-alt"></mdb-icon>
+      </a>
+      <!--Title-->
+      <mdb-card-title>
+        <p>{{movie.original_title}}</p>
+      </mdb-card-title>
+      <hr>
+      <!--Text-->
+      <mdb-card-text>
+        {{movie.overview}}
+      </mdb-card-text>
+      <a class="link-text">
+        <h5 class="waves-light" mdbWavesEffect>Read more
+          <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
+        </h5>
+      </a>
+    </mdb-card-body>
+    <!--/.Card content-->
+  </div>
+</mdb-card>
+<!--/.Card-->

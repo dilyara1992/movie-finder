@@ -7,20 +7,16 @@ import { ApiService } from '../api.service';
   styleUrls: ['./allmovies.component.scss']
 })
 export class AllmoviesComponent implements OnInit {
-
-
-  itemsPerSlide = 3;
-  singleSlideOffset = true;
   
   popular: Array<Object>;
   topRated: Object[] = [];
   latestMovie: Object[] = [];
 
-
   constructor(private _api: ApiService) { 
   }
-
+  
   ngOnInit() {
+    
     this._api.getPopular().subscribe(
       (res: any)=>{
         this.popular = res.results;

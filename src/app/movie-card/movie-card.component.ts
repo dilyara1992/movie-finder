@@ -10,6 +10,10 @@ export class MovieCardComponent implements OnInit {
 
   @Input() movie: Object;
 
+  images: Array<Object> = [
+    {image: 'https://image.tmdb.org/t/p/w500/{{movie.poster_path}}'}
+  ]
+
   constructor() { }
 
   ngOnInit() {

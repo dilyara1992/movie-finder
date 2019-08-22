@@ -1,12 +1,6 @@
-<div class="carousel">
-  <carousel 
-  [itemsPerSlide]="itemsPerSlide" 
-  [singleSlideOffset]="singleSlideOffset" 
-  [startFromIndex]=0
-  [interval]=false>
-  
-    <slide *ngFor="let movie of popular; let index=index">
-      <app-movie-card [movie] = "movie"></app-movie-card>
-    </slide>
-  </carousel>
+<h1>Popular Today</h1>
+<div class=cards>
+    <div *ngFor="let movie of popular" class="card">
+      <app-movie-card [movie]="movie"></app-movie-card>
+    </div>
 </div>
