@@ -1,15 +1,30 @@
-// .cards{
-//     display: flex;
-//     flex-wrap: wrap;
-//     flex-direction: row;
-//     padding: 10 px;
-//     border: 10 px solid black;
+// h1{
+//     position: relative;
+//     left: 40%;
+//     align-self: center;
 // }
-// .card{
-//     width: 22%;
-//     height: 30%;
-//     margin: 2%;
-//     max-height: 800px;
-//     max-width: 600px;
-//     margin-bottom: 5%;
-// }
+.cards{
+    display: flex;
+    margin: 2%;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10 px;
+    border: 10 px solid black;
+}
+.card{
+    display: flex;
+    margin-bottom: 2%;
+    flex-shrink: inherit;
+    // width: 22%;
+    // height: 30%;
+    // margin: 2%;
+    // max-height: 800px;
+    max-width: 300px;
+    // margin-bottom: 5%;
+}
+app-movie-card{
+    max-width: 100%;
+    max-height: 600px;
+}

@@ -1,13 +1,67 @@
-<h1>Sign In Form</h1>
+<!-- <h1>Sign In Form</h1>
 <div>
   <div>
     <h4>Email</h4>
     <input [(ngModel)]="_api.user.email" size="50" type="email" name="email">
-    <!-- <p>{{_api.user.email}}</p> -->
-    <h4>Password</h4>
-    <input [(ngModel)]="_api.user.password" size="50" type="password" name="pwd">
-    <!-- <p>{{_api.user.password}}</p> -->
+    <p>{{_api.user.email}}</p> -->
+    <!-- <h4>Password</h4>
+    <input [(ngModel)]="_api.user.password" size="50" type="password" name="pwd"> -->
+    <!-- <p>{{_api.user.password}}</p> 
     <p> </p>
     <button (click)="_api.onSignIn()">Submit</button>
   </div>
-</div>
+</div> -->
+<!-- Default form login -->
+<form class="text-center border border-light p-5">
+    <p class="h4 mb-4">Sign in</p>
+    <!-- Email -->
+    <input [(ngModel)]="_api.user.email" 
+    type="email" 
+    name="useremail"
+    id="defaultLoginFormEmail"
+    class="form-control mb-4" 
+    placeholder="E-mail">
+    <!-- Password -->
+
+    <input [(ngModel)]="_api.user.password"
+    type="password"
+    name="password"
+    id="defaultLoginFormPassword" 
+    class="form-control mb-4" 
+    placeholder="Password">
+
+    <div class="d-flex justify-content-around">
+      <div>
+        <!-- Remember me -->
+        <mdb-checkbox [default]="true">Remember me</mdb-checkbox>
+      </div>
+      <div>
+        <!-- Forgot password -->
+        <a href="">Forgot password?</a>
+      </div>
+    </div>
+    <!-- Sign in button -->
+    <button (click)="_api.onSignIn()" mdbBtn color="info" block="true" class="my-4" type="submit">Sign in</button>
+    <!-- Register -->
+    <p>Not a member?
+      <a href="">Register</a>
+    </p>
+  
+    <!-- Social login -->
+    <p>or sign in with:</p>
+  
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="facebook"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="twitter"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="linkedin"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="github"></mdb-icon>
+    </a>
+  
+  </form>
+  <!-- Default form login -->

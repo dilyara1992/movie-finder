@@ -14,7 +14,9 @@ export class ApiService {
   movies: any;
   input: any;
   outputSignIn = {};
-  signin: boolean = false;
+  signin: boolean = true;
+  errors: string;
+
 
   user = {
       firstname: '',
@@ -52,8 +54,7 @@ export class ApiService {
 
   signIn(){
     const url = 'http://localhost:3000/api/appUsers/login';
-    console.log(this.user);
-    this.signin = true;
+    // console.log(this.user);
     return this._http.post(url, this.user);
   }
   
@@ -68,11 +69,13 @@ export class ApiService {
   onSignIn(){
     this.signIn().subscribe(
       (res: any) => {
-        this.outputSignIn = res;
-        //this._router.navigate(['/home']);
-        console.log(this.outputSignIn);
-      }
-    )
+        console.log(" This is what came from result" + res)}, 
+        error => {
+          this.errors = error;
+          console.log(error)
+          alert('Please check your email and password.');
+        }
+    );
   }
 
 
