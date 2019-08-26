@@ -10,19 +10,29 @@ export class ApiService {
   baseUrl: string = 'https://api.themoviedb.org/3/movie';
   searchUrl: string = 'https://api.themoviedb.org/3/search/movie?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US&query=';
   apikey: string = '?api_key=6261ea3e117e2656a18f191409e668d9&language=en-US&page=1'
+  signInpostUrl = 'http://localhost:3000/api/appUsers/login'
+  
   search: string;
   movies: any;
-  input: any;
-  outputSignIn = {};
-  signin: boolean = true;
-  errors: string;
+ 
+  userDataRecieved: Object;
+  datarecieved: boolean = false;
+  errors: any;
 
+  tempforLogout: any;
+
+
+  userIdToken = {
+    userId: '',
+    id: '',
+    token: ''
+  }
 
   user = {
       firstname: '',
       lastname: '',
       email: '',
-      password: '',
+      password: ''
     }
 
 
@@ -46,37 +56,64 @@ export class ApiService {
   createNewUser(){
 
     const url= 'http://localhost:3000/api/appUsers'
-    console.log(this.user)
-    this.signin = true;
+    // console.log(this.user)
+    // this.signin = true;
     return this._http.post(url, this.user)
     
   }
 
-  signIn(){
-    const url = 'http://localhost:3000/api/appUsers/login';
+  signInpost(){
     // console.log(this.user);
-    return this._http.post(url, this.user);
+    return this._http.post(this.signInpostUrl, this.user);
+  }
+
+  getUserInfo(){
+    const url =`http://localhost:3000/api/appUsers/${this.userIdToken.userId}?access_token=${this.userIdToken.id}`
+    return this._http.get(url);
   }
   
-  onSearch(){
-    this.getMovies().subscribe(
-      (res: any )=> {
-        this.movies = res.results;
-        console.log(this.movies);
+  userCheckgetIdToken(){
+    this.signInpost().subscribe(
+      (res: any) => {
+        this.userIdToken = res;
+        console.log(this.userIdToken)
+        this.dealwithUserInfo();
+        this.datarecieved = true;
+        alert('Congratulations! You successfully Logged In!');
+        this._router.navigate(['/home']);
+      }, 
+        error => {
+          this.errors = error;
+          //console.log(error)
+          alert('Error! Please check your email and password.');
+        }
+    );
+    
+  }
+
+  dealwithUserInfo(){
+    this.getUserInfo().subscribe(
+      (res: any) => {
+        this.user = res;
+        console.log(this.user);
+        this.datarecieved == true;
       }
     )
   }
-  onSignIn(){
-    this.signIn().subscribe(
-      (res: any) => {
-        console.log(" This is what came from result" + res)}, 
-        error => {
-          this.errors = error;
-          console.log(error)
-          alert('Please check your email and password.');
-        }
-    );
+
+  sendPostrequesttologOut(){
+    const urlLogout = 'http://localhost:3000/api/appUsers/logout';
+    console.log(this.userIdToken.token);
+    return this._http.post(urlLogout, this.userIdToken);
   }
 
+  onLogout(){
+    this.sendPostrequesttologOut().subscribe(
+      (res: any) => {
+        this.tempforLogout = res;
+        console.log(this.tempforLogout);
+      }
+    )
+  }
 
 }

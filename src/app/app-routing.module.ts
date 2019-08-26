@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'home', component: AllmoviesComponent},
   {path: 'app', component: AppComponent},
   {path: "search", component: SearchComponent},
-  {path: 'register', component: RegisterComponent},
+  {path: 'signin/register', component: RegisterComponent},
   {path: 'signin', component: SigninComponent},
   {path: 'fav-movies', component: FavmoviesComponent},
   {path: 'movie-card', component: MovieCardComponent}

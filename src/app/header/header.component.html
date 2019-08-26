@@ -15,19 +15,20 @@
     </div> -->
     <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
     <div>
-      <div *ngIf="_api.signin == false">
+      <div *ngIf="_api.datarecieved == false">
         <button type="button" class="btn btn-link" id="signin-nav-button"><a routerLink="signin">Sign In</a></button>
-        <button type="button" class="btn btn-link" id="signup-nav-button"><a routerLink="register">Sign Up</a></button>
+        <!-- <button type="button" class="btn btn-link" id="signup-nav-button"><a routerLink="register">Sign Up</a></button> -->
       </div>
-      <div id="signedIn-email" *ngIf="_api.errors != null">
+      <div id="signedIn-email" *ngIf="_api.datarecieved == true">
         <div class="btn-group" dropdown>
           <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
             aria-controls="dropdown-basic">
-            {{_api.user.email}} <span class="caret"></span>
+            {{_api.user.firstname}} <span class="caret"></span>
           </button>
           <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
             <li role="menuitem"><a class="dropdown-item" routerLink="fav-movies">Favorite Movies</a></li>
-            <li role="menuitem"><a class="dropdown-item" routerLink="movie-card">Temporary Link</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerlink="search">Temporary Link</a></li>
+            <li role="menuitem"><a class="dropdown-item" routerLink="home" (click)=" _api.onLogout()">Log Out</a></li>
             <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
             <li class="divider dropdown-divider"></li>
             <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
