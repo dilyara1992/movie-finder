@@ -8,11 +8,11 @@ import { ApiService } from '../api.service';
 })
 export class SearchComponent implements OnInit {
 
-  movie: any;
 
   constructor(public _api: ApiService) { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
+ 
+  
+  
 }

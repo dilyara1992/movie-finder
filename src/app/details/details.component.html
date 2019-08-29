@@ -1,0 +1,12 @@
+<p>details works!</p>
+<h3>{{_api.movie.original_title}}</h3>
+<img src="https://image.tmdb.org/t/p/w500/{{_api.movie.poster_path}}">
+<div>
+    <p>Overview:</p>
+    <p>{{_api.movie.overview}}</p>
+    <button (click)="_api.postFavourites()">Post to favourites</button>
+    <!-- <button (click)="_api.showFavourites()">Show Saved Favourites</button> -->
+    <div *ngFor="let item of _api.favourites">
+        <p>{{item.title}}</p>
+    </div>
+</div>

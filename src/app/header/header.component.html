@@ -3,7 +3,7 @@
     <!-- navigation content -->
     <!-- Search Button with Input -->
     <p><a routerLink="home">Home Page</a></p>
-    <div id="search-input">
+    <!-- <div id="search-input"> -->
       <!-- Search form -->
       <!-- <form class="form-inline md-form form-sm">
           <div class="md-form">
@@ -13,8 +13,20 @@
         <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon>
       </form>
     </div> -->
+
+    <form class="form-inline my-1">
+      <div class="md-form form-sm my-0">
+        <input 
+        [(ngModel)] = "_api.search"
+        name = "search"
+        class="form-control form-control-sm mr-sm-2 mb-0" type="text" placeholder="Search"
+        aria-label="Search">
+      </div>
+      <button class="btn btn-outline-white btn-sm my-0" type="submit" (click)="_api.getonSearch()"><a routerLink="search">Search</a></button>
+    </form>
+
+
     <!-- <button type="button" class="btn btn-link"><i class="fas fa-user-cog"></i></button> -->
-    <div>
       <div *ngIf="_api.datarecieved == false">
         <button type="button" class="btn btn-link" id="signin-nav-button"><a routerLink="signin">Sign In</a></button>
         <!-- <button type="button" class="btn btn-link" id="signup-nav-button"><a routerLink="register">Sign Up</a></button> -->
@@ -28,7 +40,7 @@
           <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
             <li role="menuitem"><a class="dropdown-item" routerLink="fav-movies">Favorite Movies</a></li>
             <li role="menuitem"><a class="dropdown-item" routerlink="search">Temporary Link</a></li>
-            <li role="menuitem"><a class="dropdown-item" routerLink="home" (click)=" _api.onLogout()">Log Out</a></li>
+            <li role="menuitem"><a class="dropdown-item"  (click)=" _api.onLogout()">Log Out</a></li>
             <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
             <li class="divider dropdown-divider"></li>
             <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
@@ -36,6 +48,6 @@
           </ul>
         </div>
       </div>
-    </div>
-  <!-- </nav> -->
+  
+  </nav>
 </div>

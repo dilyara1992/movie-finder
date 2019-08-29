@@ -27,6 +27,7 @@ mdb-card-img{
 mdb-card-text{
     display: flex;
     margin: 3%;
+    flex-direction: column;
     overflow: hidden;
 }
 // .card-content{

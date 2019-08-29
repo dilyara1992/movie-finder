@@ -20,7 +20,7 @@
         <mdb-icon fas icon="share-alt"></mdb-icon>
       </a>
       <!--Title-->
-      <mdb-card-title>
+      <mdb-card-title >
         <p>{{movie.original_title}}</p>
       </mdb-card-title>
       <hr>
@@ -29,7 +29,7 @@
         {{movie.overview}}
       </mdb-card-text>
       <a class="link-text">
-        <h5 class="waves-light" mdbWavesEffect>Read more
+        <h5 class="waves-light" mdbWavesEffect><a (click)="_api.example(movie)">Read more</a>
           <mdb-icon fas icon="chevron-right" class="waves-light" mdbWavesEffect></mdb-icon>
         </h5>
       </a>

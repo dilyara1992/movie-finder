@@ -20,7 +20,7 @@ export class AllmoviesComponent implements OnInit {
     this._api.getPopular().subscribe(
       (res: any)=>{
         this.popular = res.results;
-        console.log(this.popular)
+        // console.log(this.popular)
       }
     )
     this._api.getToprated().subscribe(

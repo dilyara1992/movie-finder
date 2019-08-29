@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ApiService } from '../api.service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class MovieCardComponent implements OnInit {
     {image: 'https://image.tmdb.org/t/p/w500/{{movie.poster_path}}'}
   ]
 
-  constructor() { }
+  constructor(private _api: ApiService) { }
 
   ngOnInit() {
   }

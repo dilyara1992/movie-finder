@@ -24,6 +24,7 @@ import { FavmoviesComponent } from './favmovies/favmovies.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { AllmoviesComponent } from './allmovies/allmovies.component';
 import { HeaderComponent } from './header/header.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { HeaderComponent } from './header/header.component';
     FavmoviesComponent,
     MovieCardComponent,
     AllmoviesComponent,
-    HeaderComponent
+    HeaderComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

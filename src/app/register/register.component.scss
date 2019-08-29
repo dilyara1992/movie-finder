@@ -1,20 +1,5 @@
-div{
-    margin: 5%;
-}
-h3{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+form{
     position: relative;
-    top: 50%;
-}
-
-.UserRegistration{
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 50%;
-    height: 70%;
-    margin: 15%;
+    left: 30%;
+    max-width: 600px;
 }

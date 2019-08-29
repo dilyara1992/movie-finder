@@ -7,11 +7,13 @@ import { SigninComponent} from './signin/signin.component';
 import { FavmoviesComponent } from './favmovies/favmovies.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { AllmoviesComponent } from './allmovies/allmovies.component';
+import { DetailsComponent } from './details/details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: AllmoviesComponent},
   {path: 'app', component: AppComponent},
+  {path: 'details/:id', component: DetailsComponent},
   {path: "search", component: SearchComponent},
   {path: 'signin/register', component: RegisterComponent},
   {path: 'signin', component: SigninComponent},

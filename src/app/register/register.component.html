@@ -32,89 +32,76 @@
 </div> -->
 
 <!-- Material form register -->
-<mdb-card>
+<!-- Default form register -->
+        <form class="text-center border border-light p-5" action="#!">
 
-    <mdb-card-header class="info-color white-text text-center py-4">
-      <h5>
-        <strong>Sign up</strong>
-      </h5>
-    </mdb-card-header>
-  
-    <!--Card content-->
-    <mdb-card-body class="px-lg-5 pt-0">
-  
-      <!-- Form -->
-      <form class="text-center" style="color: #757575;">
-  
-        <div class="form-row">
-          <div class="col">
-            <!-- First name -->
-            <div class="md-form">
-              <input type="text" id="materialRegisterFormFirstName" class="form-control" mdbInput>
-              <label for="materialRegisterFormFirstName">First name</label>
-            </div>
-          </div>
-          <div class="col">
-            <!-- Last name -->
-            <div class="md-form">
-              <input type="email" id="materialRegisterFormLastName" class="form-control" mdbInput>
-              <label for="materialRegisterFormLastName">Last name</label>
-            </div>
-          </div>
-        </div>
-  
-        <!-- E-mail -->
-        <div class="md-form mt-0">
-          <input type="email" id="materialRegisterFormEmail" class="form-control" mdbInput>
-          <label for="materialRegisterFormEmail">E-mail</label>
-        </div>
-  
-        <!-- Password -->
-        <div class="md-form">
-          <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
-            mdbInput>
-          <label for="materialRegisterFormPassword">Password</label>
-          <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-            At least 8 characters and 1 digit
-          </small>
-        </div>
-  
-        <!-- Phone number -->
-        <div class="md-form">
-          <input type="text" id="materialRegisterFormPhone" class="form-control" aria-describedby="materialRegisterFormPhoneHelpBlock"
-            mdbInput>
-          <label for="materialRegisterFormPhone">Phone number</label>
-          <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-            Optional - for two-step authentication
-          </small>
-        </div>
-  
-        <!-- Newsletter -->
-        <mdb-checkbox>Subscribe to our newsletter</mdb-checkbox>
-  
-        <!-- Sign up button -->
-        <button mdbBtn color="info" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
-          type="submit">Sign in</button>
-  
-        <!-- Social register -->
-        <p>or sign up with:</p>
-  
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="facebook"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="twitter"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="linkedin"></mdb-icon>
-        </a>
-        <a type="button" class="light-blue-text mx-2">
-          <mdb-icon fab icon="heart"></mdb-icon>
-        </a>
-  
-        <hr>
-  
-        <!-- Terms of service -->
-        <p>By clicking
-          <em>Sign up</em> you agree to our
-          <a href="" target="_blank">terms
+                <p class="h4 mb-4">Sign up</p>
+            
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <!-- First name -->
+                        <input
+                        [(ngModel)]="_api.user.firstname" 
+                        name="firstName"
+                        type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                        <!-- Last name -->
+                        <input 
+                        [(ngModel)]="_api.user.lastname"
+                        name="lastname"
+                        type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+                    </div>
+                </div>
+            
+                <!-- E-mail -->
+                <input 
+                [(ngModel)]="_api.user.email"
+                name="email"
+                type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+            
+                <!-- Password -->
+                <input 
+                [(ngModel)]="_api.user.password"
+                name="password"
+                type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                    At least 8 characters and 1 digit
+                </small>
+            
+            
+                <!-- Newsletter -->
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
+                    <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
+                </div>
+            
+                <!-- Sign up button -->
+                <button (click)="onClickUser()"
+                class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+            
+                <!-- Social register -->
+                <p>or sign up with:</p>
+            
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a type="button" class="light-blue-text mx-2">
+                    <i class="fab fa-github"></i>
+                </a>
+            
+                <hr>
+            
+                <!-- Terms of service -->
+                <p>By clicking
+                    <em>Sign up</em> you agree to our
+                    <a href="" target="_blank">terms of service</a>
+            
+            </form>
+            <!-- Default form register -->

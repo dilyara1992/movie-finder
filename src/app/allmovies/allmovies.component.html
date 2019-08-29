@@ -1,6 +1,7 @@
-<h1>Popular Today</h1>
-<div class=cards>
+<h1 >Popular Today</h1>
+  <div  class=cards *ngIf="popular">
     <div *ngFor="let movie of popular" class="card">
       <app-movie-card [movie]="movie"></app-movie-card>
     </div>
-</div>
+  </div>
+

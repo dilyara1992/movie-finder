@@ -12,7 +12,6 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
   }
-
   onClickUser(){
     this._api.createNewUser()
       .subscribe( (res: any) =>{
